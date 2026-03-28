@@ -3,20 +3,26 @@ title: Hi. Im Sami
 description: Get started building your docs site with Starlight.
 template: splash # Remove or comment out this line to display the site sidebar on this page.
 hero:
-  tagline: I've been building software full time since May 2017, and tinkering since before then as well. Mostly business applications, as well as launching a few of my own indie and Saas projects. Some of them even make a little MRR. Right now I'm contracting mostly, and helping founders and business teams build great software.
+  tagline: I've been building software full time since May 2017, and tinkering since before then as well. Mostly business applications, as well as launching a few of my own indie and saas projects. Some of them even make a little MRR. Right now I'm contracting mostly, and helping founders and business teams build great software.
   image:
     file: ../../assets/sami.jpeg
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import {Card, CardGrid, LinkButton} from '@astrojs/starlight/components';
 
-## My writing.
+## My writing
 
 <CardGrid>
-	<Card title="Notes" icon="pencil">
-		On all things software development, how I work, and some of the things I've built and learned along the way.
-	</Card>
+  <Card title="Notes" icon="pencil">
+    On all things software development, how I work, and some of the things I've built and learned along the way.
+    <hr />
+    <LinkButton href={"/notes"} variant={"minimal"}>Read notes</LinkButton>
+  </Card>
+
+
 	<Card title="Blog" icon="document">
 		Some of my longer form posts on software development and AI.
-	</Card>
+    <hr />
+    <LinkButton href={"/blog"} variant={"minimal"}>Read blog</LinkButton>
+  </Card>
 </CardGrid>
